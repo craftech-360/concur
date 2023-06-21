@@ -138,3 +138,15 @@
 {
   transform: none;
 }
+
+@media only screen and (min-width: 1366px) {
+  #menu
+  {
+    height: auto;
+    
+  }
+  #menu li
+  {
+    padding: 12px 0 22px 22px;
+  }
+}
