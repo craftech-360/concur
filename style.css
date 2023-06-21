@@ -128,7 +128,7 @@
 
 #menu li
 {
-  padding: 15px 0 25px 25px;
+  padding: 15px 10px 25px 30px;
   font-size: 1em;
   letter-spacing: 2px;
   font-weight: bold;
@@ -139,14 +139,15 @@
   transform: none;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (max-width: 1366px) {
   #menu
   {
+    padding-top: 120px;
     height: auto;
     
   }
   #menu li
   {
-    padding: 12px 0 22px 22px;
+    padding: 10px 10px 20px 30px;
   }
 }
