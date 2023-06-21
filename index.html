@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <script defer src="./public/js/main.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        },
+                        animation: {
+                            'glow-slow': 'glow 1.4s ease-out infinite',
+                        },
+                        divTheme: {
+                            'font-size': '2em',
+                            border: '0.1em solid aliceblue',
+                            'border-radius': '1em',
+                            padding: '.8em',
+                            width: '20em',
+                            'text-decoration-color': '#0b4c85',
+                            'font-weight': '600',
+                        },
+                        screens: {
+                            xl: '1380px',
+                        },
+                                                
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .content-auto {
+                    content-visibility: auto;
+                }
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body
+        class="flex justify-center items-center h-screen bg-black w-screen overflow-x-hidden"
+    >
+
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a type="submit" onclick="goFirst()"
+                        ><li>Concur Login</li></a
+                    >
+                    <a type="submit" onclick="goSecond()"
+                        ><li>Create And Submit A Travel Request</li></a
+                    >
+                    <a type="submit" onclick="goThird()"
+                        ><li>Review And Approve A Travel Request</li></a
+                    >
+                    <a type="submit" onclick="goFour()"
+                        ><li>Capture Receipts On-The-Go</li></a
+                    >
+                    <a type="submit" onclick="goFive()"
+                        ><li>Create And Submit An Expense Report</li></a
+                    >
+                    <a type="submit" onclick="goSix()"
+                        ><li>Act As A Delegate</li></a
+                    >
+                    <a type="submit" onclick="goSeven()"
+                        ><li>Review And Approve An Expense Report</li></a
+                    >
+                    <a type="submit" onclick="goEight()"
+                        ><li>Back-Office Audit Check</li></a
+                    >
+                    <a type="submit" onclick="goNine()"
+                        ><li>Credit Card Administration</li></a
+                    >
+                    <a type="submit" onclick="goTen()"><li>Reporting</li></a>
+                </ul>
+            </div>
+        </nav>
+        <div class="absolute bottom-0 w-1/2 right-0">
+            <img
+                class="object-cover"
+                id="img"
+                src="./public/video/Infosys.png"
+                alt=""
+            />
+        </div>
+        <div class="relative">
+            <video
+                id="video"
+                class="w-full h-auto lg:h-screen"
+                src=""
+                muted
+                
+                autoplay
+                onended="videoEnd()"
+            ></video>
+
+            <button class="btn btn-glow" id="button" onclick="startVideo()">
+                START YOUR CONCUR EXPERIENCE
+            </button>
+
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute top-[44%] left-[48%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video1"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-clifford shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden sm:bottom-[18%] sm:right-[3%] lg:bottom-[20%] lg:right-[3%] transform -translate-x-1/2 bg-red -translate-y-1/2"
+                id="video2"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-clifford shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute xl:bottom-[24%] lg:bottom-[21%] lg:left-[6%] sm:bottom-[20%] sm:left-[1%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video4"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-clifford shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden lg:bottom-[15%] xl:bottom-[18%]  lg:left-[1%] sm:bottom-[15%] sm:left-[1%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video5"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-clifford shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute lg:bottom-[22%] lg:bottom-[20%] lg:left-[5%] sm:bottom-[18%] sm:left-[1%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video6"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden xl:top-[30%] lg:top-[28%] lg:right-[3%] sm:top-[30%] sm:right-[2%] lg:right-6"
+                id="video7"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden xl:top-[30%] lg:top-[28%] lg:right-[3%] sm:top-[30%] sm:right-[2%] lg:right-6"
+                id="video8"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite theme('divTheme') hidden absolute xl:top-[44%] xl:right-[31%] lg:top-[43%] lg:right-[30%] sm:top-[41%] sm:right-[28%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video11"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden lg:top-[30%] lg:right-[2%] sm:top-[30%] sm:right-[2%] lg:right-6"
+                id="video12"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden xl:bottom-[24%] sm:bottom-[22%] sm:right-8 lg:bottom-[23%] lg:right-[4%] lg:transform lg:-translate-x-1/2 bg-red lg:-translate-y-1/2"
+                id="video17"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden xl:bottom-[18%]  lg:bottom-[14%] lg:left-[14%] sm:bottom-[14%] sm:left-[13%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video18"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden hidden xl:top-[19%] lg:top-[16%] lg:right-[13%] sm:top-[16%] sm:right-[10%] lg:right-6"
+                id="video19"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden xl:top-[22%] lg:top-[20%] lg:right-[12%] sm:top-[19%] sm:right-[10%] lg:right-6"
+                id="video20"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden xl:bottom-[26%] lg:bottom-[25%] lg:left-[14%] sm:bottom-[20%] sm:left-[13%] transform -translate-x-1/2 -translate-y-1/2"
+                id="video22"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="bg:none hidden text-current font-inherit decoration-clifford text-[#0b4c85] shadow-[#0b4c85] animation-[glow-slow] font-bold cursor-pointer font-2xl border-[#f0f8ff] animate__animated animate__pulse animate__infinite infinite absolute hidden lg:right-[31%] lg:top-[60%] sm:top-[58%] sm:right-[30%]"
+                id="video24"
+                style="color: #0b4c85"
+                onclick="startVideo()"
+            >
+                Click Here
+            </div>
+            <div
+                class="flex flex-row w-full overflow-x-hidden justify-between absolute lg:bottom-1" 
+            >
+                <div class="flex flex-row">
+                    <button
+                        id="rewind"
+                        onclick="goReplay()"
+                        class="text-[#0b4c85] pl-5 pr-5 m-[5%]"
+                        style="font-size: 40px; font-weight: bolder"
+                    >
+                        &#x21bb;
+                    </button>
+                    <button onclick="previousPlay()"
+                        id="reverse"
+                        class="rounded-xl text-[#0b4c85] font-8xl font-extrabold m-[5%]"
+                        style="font-size: 40px; font-weight: bolder"
+                    >
+                        &laquo;
+                    </button>
+                </div>
+                <button   
+                    id="nextButton"
+                    class="flex flex-row"
+                >
+                    <div
+                        class="bg-[#0b4c85] pl-5 pr-5 pt-3 pb-3 rounded-xl text-white m-[5%]"
+                        onclick="startVideo()"
+                    >
+                        Next
+                    </div>
+                </button>
+                <div onclick="fromStart()" id="homeButton" class="flex flex-row m-3 color-blue">
+                    <div class="bg-[#0b4c85] p-5 rounded-xl text-white m-[5%]">
+                        Home
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
